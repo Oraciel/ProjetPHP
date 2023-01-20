@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 20 jan. 2023 à 18:50
+-- Généré le : ven. 20 jan. 2023 à 19:39
 -- Version du serveur : 10.6.11-MariaDB-cll-lve
 -- Version de PHP : 7.2.34
 
@@ -39,7 +39,21 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `pseudo`, `email`, `mdp`) VALUES
-(1, 'Oraciel', 'vincent.dacheville@etu.unice.fr', 'admin123');
+(1, 'Oraciel', 'vincent83.dacheville@gmail.com', 'admin123'),
+(2, 'admin', 'admin@gmail.com', 'admin123');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fournisseur`
+--
+
+CREATE TABLE `fournisseur` (
+  `id` int(11) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `prenom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -128,6 +142,12 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `fournisseur`
+--
+ALTER TABLE `fournisseur`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `produit`
 --
 ALTER TABLE `produit`
@@ -148,7 +168,13 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `fournisseur`
+--
+ALTER TABLE `fournisseur`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT pour la table `produit`

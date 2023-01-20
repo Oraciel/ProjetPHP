@@ -19,9 +19,9 @@
         <div class="nav-right">
             <?php
             if (isset($_SESSION['DV6b8PsIEW'])) {
-                echo '<a href="admin/supprimer.php" class="btn supp-btn">Supprimer</a>
+                echo '
                 <a href="admin/ajouter.php" class="btn add-btn">Ajouter</a>
-                <a href="admin/index.php" class="btn modi-btn">Modifier</a>';
+                <a href="admin/index.php" class="btn modi-btn">Modifier / Supprimer</a>';
             }
             if (isset($_SESSION['T358auXCXV']) || isset($_SESSION['DV6b8PsIEW'])) {
                 echo '<a href="PHP/deconnexion.php" class="btn deco-btn">Se déconnecter</a>';
@@ -75,12 +75,9 @@ if (isset($_POST['submit'])) {
     $req = $conn->prepare("INSERT INTO utilisateur (pseudo, nom, prenom, email, mdp) VALUES (?,?,?,?,?)");
     $req->execute(array($usernameOfNewUser, $nameOfNewUser, $firstnameOfNewUser, $emailOfNewUser, $passwordOfNewUser));
 
-    // Optionnel : utilisez un message pour indiquer à l'utilisateur que l'inscription a été effectuée avec succès
     echo "<p>Inscription effectuée avec succès</p>";
 
     $req->closeCursor();
 }
-
-
 
 ?>

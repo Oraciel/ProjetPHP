@@ -19,7 +19,6 @@ h1 {
     display: flex;
 }
 
-/* Styles pour la boîte de produit globale */
 .product-box {
     width: 200px;
     margin: 20px ;
@@ -28,10 +27,9 @@ h1 {
     color: white;
     padding: 10px;
     text-align: center;
-    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+    transition: all 0.2s ease-in-out;
 }
 
-/* Styles pour le nom du produit */
 .product-name {
     font-size: 18px;
     font-weight: bold;
@@ -42,23 +40,20 @@ h1 {
     height: 80px;
 }
 
-/* Styles pour l'image du produit */
 .product-box img {
     width: 100%;
 }
 
-/* Styles pour la description du produit */
 .product-description {
     font-size: 14px;
     line-height: 1.5;
     margin-top: 10px;
-    max-height: 100px; /* Limite la hauteur maximale */
+    max-height: 100px;
     overflow: hidden;
-    text-overflow: ellipsis; /* Ajoutez des points de suspension à la fin */
+    text-overflow: ellipsis;
 }
 
 
-/* Styles pour le prix du produit */
 .product-price {
     font-size: 16px;
     font-weight: bold;
@@ -66,7 +61,6 @@ h1 {
     margin-top: 10px;
 }
 
-/* Styles pour le bouton "Voir plus" */
 .see-more-button {
     display: block;
     width: 80%;
@@ -76,10 +70,9 @@ h1 {
     color: white;
     text-decoration: none;
     text-align: center;
-    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+    transition: all 0.2s ease-in-out;
 }
 
-/* Styles pour le bouton "Ajouter au panier" */
 .add-to-cart-button {
     display: block;
     width: 80%;
@@ -89,12 +82,11 @@ h1 {
     color: white;
     text-align: center;
     cursor: pointer;
-    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+    transition: all 0.2s ease-in-out;
 }
 
-/* Styles pour l'effet hover */
 .product-box:hover, .see-more-button:hover, .add-to-cart-button:hover {
-    transform: scale(1.1); /* agrandit l'élément de 10% */
+    transform: scale(1.1);
     cursor: pointer;
 }
 

@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-// Add an item to the cart
 if (isset($_POST['item_id'])) {
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
@@ -15,7 +14,6 @@ if (isset($_POST['item_id'])) {
     array_push($_SESSION['cart'], $item);
 }
 
-// Remove an item from the cart
 if (isset($_GET['remove_item_id'])) {
     if (isset($_SESSION['cart'])) {
         for ($i = 0; $i < count($_SESSION['cart']); $i++) {
@@ -28,7 +26,6 @@ if (isset($_GET['remove_item_id'])) {
     }
 }
 
-// Update the quantity of an item in the cart
 if (isset($_POST['update_item_id']) && isset($_POST['update_item_quantity'])) {
     if (isset($_SESSION['cart'])) {
         for ($i = 0; $i < count($_SESSION['cart']); $i++) {

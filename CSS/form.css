@@ -7,6 +7,7 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 form {
@@ -35,7 +36,7 @@ form {
   }
   
   input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: red;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -44,7 +45,8 @@ form {
     float: right;
   }
   
-  input[type="submit"]:hover {
-    background-color: #45a049;
+  p{
+    text-align: center;
+    color: white;
   }
   

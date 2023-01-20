@@ -24,9 +24,9 @@ include "config/commandes.php"
         <div class="nav-right">
             <?php
             if (isset($_SESSION['DV6b8PsIEW'])) {
-                echo '<a href="admin/supprimer.php" class="btn supp-btn">Supprimer</a>
+                echo '
                 <a href="admin/ajouter.php" class="btn add-btn">Ajouter</a>
-                <a href="admin/index.php" class="btn modi-btn">Modifier</a>';
+                <a href="admin/index.php" class="btn modi-btn">Modifier / Supprimer</a>';
             }
             if (isset($_SESSION['T358auXCXV']) || isset($_SESSION['DV6b8PsIEW'])) {
                 echo '<a href="PHP/deconnexion.php" class="btn deco-btn">Se déconnecter</a>';
@@ -41,8 +41,6 @@ include "config/commandes.php"
     </nav>
 
     <div id="container">
-        <!-- zone de connexion -->
-
         <form method="POST">
             <h1>Connexion</h1>
 

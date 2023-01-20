@@ -7,6 +7,7 @@ body {
 
 h1 {
     text-align: center;
+    color: white;
 }
 
 .all-product {
@@ -23,7 +24,7 @@ h1 {
     margin: 10px;
     padding: 10px;
     border: 1px solid #ccc;
-    background-color: white;
+    backdrop-filter: blur(2px);
 }
 
 .product-name {
@@ -68,4 +69,8 @@ img {
     height: 100px;
     margin-right: 10px;
     margin-bottom: 10px;
+}
+
+p{
+    color: white;
 }

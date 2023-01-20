@@ -15,11 +15,36 @@ $produits = afficherParId($product_id);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" type="text/css" href="../CSS/form.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/nav.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OraBook</title>
 </head>
 
 <body>
+
+    <nav>
+        <div class="nav-left">
+            <a href="../index.php">OraBook</a>
+        </div>
+        <div class="nav-right">
+            <?php
+            if (isset($_SESSION['DV6b8PsIEW'])) {
+                echo '
+                <a href="ajouter.php" class="btn add-btn">Ajouter</a>
+                <a href="index.php" class="btn modi-btn">Modifier</a>';
+            }
+            if (isset($_SESSION['T358auXCXV']) || isset($_SESSION['DV6b8PsIEW'])) {
+                echo '<a href="../PHP/deconnexion.php" class="btn deco-btn">Se déconnecter</a>';
+            } else {
+                echo '<a href="../login.php" class="btn connect-btn">Se connecter</a>
+            <a href="../inscrire.php" class="btn inscrire-btn">S\'inscrire</a>';
+            }
+            ?>
+            <a href="../PHP/panier.php" class="btn">Panier</a>
+            <a href="../savoirPlus.php" class="btn">En savoir plus</a>
+        </div>
+    </nav>
+
     <h1>Modifier :</h1>
     <?php foreach ($produits as $produit) : ?>
         <form method="post">
@@ -90,12 +115,11 @@ if (isset($_POST["valider"])) {
     $poids = htmlspecialchars($_POST["poids"]);
     $dimensions = htmlspecialchars($_POST["dimensions"]);
     try {
-        echo "ID :" . $product_id;
         modifier($reference, $prixPublic, $prixAchat, $image, $titre, $description, $genre, $editeur, $langue, $nombrePage, $ISBN10, $ISBN13, $poids, $dimensions, $product_id);
-        header("Location : index.php");
     } catch (Exception $e) {
         $e->getMessage();
     }
+    header("Location: index.php");
 }
 
 ?>
