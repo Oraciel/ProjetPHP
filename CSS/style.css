@@ -1,0 +1,100 @@
+body {
+    background-image: url('../Images/FondLivre.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  p{
+    color: white;
+    text-align: center;
+  }
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.all-product {
+    display: flex;
+}
+
+/* Styles pour la boîte de produit globale */
+.product-box {
+    width: 200px;
+    margin: 20px ;
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+}
+
+/* Styles pour le nom du produit */
+.product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+/* Styles pour l'image du produit */
+.product-box img {
+    width: 100%;
+}
+
+/* Styles pour la description du produit */
+.product-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 10px;
+    max-height: 100px; /* Limite la hauteur maximale */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Ajoutez des points de suspension à la fin */
+}
+
+
+/* Styles pour le prix du produit */
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e60073;
+    margin-top: 10px;
+}
+
+/* Styles pour le bouton "Voir plus" */
+.see-more-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #e60073;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+}
+
+/* Styles pour le bouton "Ajouter au panier" */
+.add-to-cart-button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #0b7caf;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Ajoutez une transition pour l'effet hover */
+}
+
+/* Styles pour l'effet hover */
+.product-box:hover, .see-more-button:hover, .add-to-cart-button:hover {
+    transform: scale(1.1); /* agrandit l'élément de 10% */
+    cursor: pointer;
+}
+

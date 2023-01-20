@@ -1,0 +1,71 @@
+body {
+    background-image: url('../Images/FondLivre.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+h1 {
+    text-align: center;
+}
+
+.all-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.product-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.product-name {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.product-id {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    width: 100%;
+    text-align: left;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.action-btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background-color: #f1481b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+img {
+    width: 50px;
+    height: 100px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,77 @@
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:700';
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-item {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  position: relative;
+  margin: 35px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.category-item:after {
+  transition: 0.3s all ease;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 3px;
+  border: 3px solid #B15947;
+}
+
+.category-item:before {
+  content: '';
+  position: absolute;
+  border-radius: 3px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: #c5baba;
+  z-index: -1;
+}
+
+.category-item:hover:after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.category-item:hover {
+  color: #b42f0a;
+}
+
+.category-item:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.category-item:active:before {
+  background-color: #b42f0a;
+}
+
+.category-item:active:after {
+  border-color: #b42f0a;
+}
